@@ -3,132 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>특별한 날에 초대합니다</title>
+    <title>문똘똘 & 이쁜이 결혼식에 초대합니다</title>
     <style>
-        /* 기본 스타일 설정 */
+        /* 기본 스타일 및 폰트 설정 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap');
+
         body {
             margin: 0;
             padding: 0;
+            background: linear-gradient(180deg, #fdfcfb 0%, #e2d1c3 100%);
+            font-family: 'Noto Serif KR', serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f9f7f2;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            color: #333;
+            color: #4a4a4a;
         }
 
-        /* 초대장 카드 컨테이너 */
-        .invitation-card {
-            background: white;
+        /* 초대장 카드 */
+        .card {
+            background: rgba(255, 255, 255, 0.9);
             width: 90%;
-            max-width: 450px;
-            padding: 40px 20px;
+            max-width: 400px;
+            padding: 60px 30px;
+            border-radius: 200px 200px 0 0; /* 상단 아치형 디자인 */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-radius: 15px;
-            border: 1px solid #eee;
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* 헤더 스타일 */
-        h1 {
-            font-size: 1.5rem;
-            color: #b89b8e;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
+        /* 페이드인 애니메이션 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .main-title {
-            font-size: 2.2rem;
-            margin: 20px 0;
-            font-weight: 700;
+        .flower-icon {
+            font-size: 24px;
+            color: #c9ada7;
+            margin-bottom: 20px;
         }
 
-        /* 구분선 */
-        .divider {
-            width: 50px;
-            height: 1px;
-            background-color: #b89b8e;
-            margin: 25px auto;
-        }
-
-        /* 상세 정보 섹션 */
-        .info-section {
-            line-height: 1.8;
-            margin-bottom: 40px;
-        }
-
-        .info-item {
-            margin: 10px 0;
-            font-size: 1.1rem;
-        }
-
-        .label {
-            display: block;
-            font-size: 0.8rem;
-            color: #999;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        /* 버튼 스타일 */
-        .map-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #b89b8e;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
+        .sub-title {
             font-size: 0.9rem;
-            transition: background 0.3s ease;
+            letter-spacing: 4px;
+            color: #9a8c98;
+            margin-bottom: 20px;
         }
 
-        .map-button:hover {
-            background-color: #a08477;
+        .names {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 30px 0;
+            color: #4a4e69;
         }
 
-        /* 하단 메시지 */
-        .footer-note {
+        .names span {
+            font-size: 1.2rem;
+            color: #9a8c98;
+            margin: 0 10px;
+            font-weight: 300;
+        }
+
+        .date-info {
+            font-size: 1.1rem;
+            margin: 40px 0;
+            line-height: 2;
+        }
+
+        .date-info .highlight {
+            font-weight: 700;
+            display: block;
+            font-size: 1.3rem;
+            color: #222;
+        }
+
+        .location {
+            font-size: 0.95rem;
+            color: #6d6875;
+            margin-bottom: 50px;
+        }
+
+        .divider {
+            width: 1px;
+            height: 60px;
+            background: #e2d1c3;
+            margin: 30px auto;
+        }
+
+        .message {
+            font-size: 0.9rem;
+            line-height: 2;
+            color: #4a4a4a;
+            padding: 0 20px;
+        }
+
+        .btn-group {
+            margin-top: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border: 1px solid #c9ada7;
+            color: #c9ada7;
+            text-decoration: none;
             font-size: 0.85rem;
-            color: #aaa;
-            margin-top: 40px;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #c9ada7;
+            color: white;
+        }
+
+        /* 꽃잎 흩날리는 느낌의 배경 장식 */
+        .deco {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.2;
         }
     </style>
 </head>
 <body>
 
-    <div class="invitation-card">
-        <h1>INVITATION</h1>
+    <div class="card">
+        <div class="flower-icon">✿</div>
+        <div class="sub-title">WEDDING INVITATION</div>
         
-        <div class="main-title">
-            김철수 & 이영희<br>
-            결혼합니다
+        <div class="names">
+            문똘똘 <span>&</span> 이쁜이
         </div>
 
         <div class="divider"></div>
 
-        <div class="info-section">
-            <div class="info-item">
-                <span class="label">DATE</span>
-                <strong>2026년 5월 23일 토요일</strong><br>
-                오후 12시 30분
-            </div>
-
-            <div class="divider" style="width: 20px; opacity: 0.3;"></div>
-
-            <div class="info-item">
-                <span class="label">LOCATION</span>
-                <strong>행복 예식장 2층 그랜드홀</strong><br>
-                서울시 강남구 테헤란로 123
-            </div>
+        <div class="date-info">
+            저희 두 사람, 결혼합니다.
+            <span class="highlight">2026. 03. 28</span>
+            토요일 오후 12시 30분
         </div>
 
-        <a href="https://maps.google.com" target="_blank" class="map-button">오시는 길 보기</a>
+        <div class="location">
+            그랜드 웨딩 컨벤션 1층 아모르홀<br>
+            (서울시 중구 태평로 1가)
+        </div>
 
-        <p class="footer-note">
-            축복해주시는 소중한 마음 잊지 않겠습니다.<br>
-            감사합니다.
-        </p>
+        <div class="message">
+            서로가 마주보며 다져온 사랑을<br>
+            이제 함께 같은 곳을 바라보며<br>
+            아름다운 첫 발을 내딛으려 합니다.<br>
+            귀한 걸음 하시어 축복해 주시면 감사하겠습니다.
+        </div>
+
+        <div class="btn-group">
+            <a href="#" class="btn">지도로 위치 확인하기</a>
+        </div>
+
+        <div style="margin-top: 40px; font-size: 0.8rem; color: #b8b8b8;">
+            신랑 문똘똘 · 신부 이쁜이 드림
+        </div>
     </div>
 
 </body>
