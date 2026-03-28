@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특별한 날에 초대합니다</title>
+    <style>
+        /* 기본 스타일 설정 */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f7f2;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            color: #333;
+        }
 
+        /* 초대장 카드 컨테이너 */
+        .invitation-card {
+            background: white;
+            width: 90%;
+            max-width: 450px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+
+        /* 헤더 스타일 */
+        h1 {
+            font-size: 1.5rem;
+            color: #b89b8e;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .main-title {
+            font-size: 2.2rem;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+
+        /* 구분선 */
+        .divider {
+            width: 50px;
+            height: 1px;
+            background-color: #b89b8e;
+            margin: 25px auto;
+        }
+
+        /* 상세 정보 섹션 */
+        .info-section {
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .label {
+            display: block;
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        /* 버튼 스타일 */
+        .map-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #b89b8e;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .map-button:hover {
+            background-color: #a08477;
+        }
+
+        /* 하단 메시지 */
+        .footer-note {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <h1>INVITATION</h1>
+        
+        <div class="main-title">
+            김철수 & 이영희<br>
+            결혼합니다
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-section">
+            <div class="info-item">
+                <span class="label">DATE</span>
+                <strong>2026년 5월 23일 토요일</strong><br>
+                오후 12시 30분
+            </div>
+
+            <div class="divider" style="width: 20px; opacity: 0.3;"></div>
+
+            <div class="info-item">
+                <span class="label">LOCATION</span>
+                <strong>행복 예식장 2층 그랜드홀</strong><br>
+                서울시 강남구 테헤란로 123
+            </div>
+        </div>
+
+        <a href="https://maps.google.com" target="_blank" class="map-button">오시는 길 보기</a>
+
+        <p class="footer-note">
+            축복해주시는 소중한 마음 잊지 않겠습니다.<br>
+            감사합니다.
+        </p>
+    </div>
+
+</body>
+</html>
