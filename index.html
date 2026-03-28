@@ -3,169 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문똘똘 & 이쁜이 결혼식에 초대합니다</title>
+    <title>문똘똘 & 나프로 결혼식에 초대합니다</title>
     <style>
-        /* 기본 스타일 및 폰트 설정 */
+        /* 구글 폰트 적용 (나눔명조/노토세리프 계열) */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap');
 
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(180deg, #fdfcfb 0%, #e2d1c3 100%);
+            background: #fdfaf7; /* 따뜻한 미색 배경 */
             font-family: 'Noto Serif KR', serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: #4a4a4a;
+            color: #444;
         }
 
-        /* 초대장 카드 */
+        /* 초대장 메인 카드 */
         .card {
-            background: rgba(255, 255, 255, 0.9);
+            background: #ffffff;
             width: 90%;
-            max-width: 400px;
-            padding: 60px 30px;
-            border-radius: 200px 200px 0 0; /* 상단 아치형 디자인 */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 420px;
+            padding: 70px 30px;
+            border-radius: 210px 210px 0 0; /* 우아한 아치형 */
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06);
             text-align: center;
-            animation: fadeIn 1.5s ease-out;
-            position: relative;
-            overflow: hidden;
+            animation: fadeIn 1.2s ease-out;
+            border: 1px solid #f2e9e4;
         }
 
-        /* 페이드인 애니메이션 */
+        /* 부드럽게 나타나는 애니메이션 */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .flower-icon {
-            font-size: 24px;
-            color: #c9ada7;
-            margin-bottom: 20px;
+            font-size: 28px;
+            color: #d4a373; /* 로즈골드/베이지 톤 */
+            margin-bottom: 25px;
+            letter-spacing: 5px;
         }
 
         .sub-title {
-            font-size: 0.9rem;
-            letter-spacing: 4px;
-            color: #9a8c98;
-            margin-bottom: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 5px;
+            color: #bfa89e;
+            margin-bottom: 30px;
         }
 
         .names {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin: 30px 0;
-            color: #4a4e69;
+            margin: 35px 0;
+            color: #333;
         }
 
         .names span {
-            font-size: 1.2rem;
-            color: #9a8c98;
-            margin: 0 10px;
+            font-size: 1.1rem;
+            color: #bfa89e;
+            margin: 0 12px;
             font-weight: 300;
+        }
+
+        .divider {
+            width: 1px;
+            height: 50px;
+            background: #e2d1c3;
+            margin: 30px auto;
         }
 
         .date-info {
             font-size: 1.1rem;
-            margin: 40px 0;
-            line-height: 2;
+            margin-bottom: 45px;
+            line-height: 2.2;
         }
 
         .date-info .highlight {
             font-weight: 700;
             display: block;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #222;
+            letter-spacing: 1px;
         }
 
         .location {
             font-size: 0.95rem;
-            color: #6d6875;
+            color: #777;
             margin-bottom: 50px;
+            line-height: 1.6;
         }
 
-        .divider {
-            width: 1px;
-            height: 60px;
-            background: #e2d1c3;
-            margin: 30px auto;
-        }
-
-        .message {
-            font-size: 0.9rem;
-            line-height: 2;
-            color: #4a4a4a;
-            padding: 0 20px;
-        }
-
+        /* 지도 버튼 스타일 */
         .btn-group {
-            margin-top: 50px;
+            margin-top: 20px;
         }
 
-        .btn {
+        .btn-map {
             display: inline-block;
-            padding: 12px 25px;
-            border: 1px solid #c9ada7;
-            color: #c9ada7;
+            padding: 14px 40px;
+            background-color: #d4a373; /* 차분한 골드톤 */
+            color: #fff;
             text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 30px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 163, 115, 0.3);
+        }
+
+        .btn-map:hover {
+            background-color: #bc8a5f;
+        }
+
+        .footer-message {
+            margin-top: 60px;
             font-size: 0.85rem;
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background: #c9ada7;
-            color: white;
-        }
-
-        /* 꽃잎 흩날리는 느낌의 배경 장식 */
-        .deco {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0.2;
+            line-height: 1.8;
+            color: #888;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <div class="flower-icon">✿</div>
-        <div class="sub-title">WEDDING INVITATION</div>
+        <div class="flower-icon">✧</div>
+        <div class="sub-title">WEDDING DAY</div>
         
         <div class="names">
-            문똘똘 <span>&</span> 이쁜이
+            문똘똘 <span>&</span> 나프로
         </div>
 
         <div class="divider"></div>
 
         <div class="date-info">
-            저희 두 사람, 결혼합니다.
-            <span class="highlight">2026. 03. 28</span>
+            함께 있을 때 가장 행복한 저희 두 사람,<br>
+            약속의 자리에 소중한 분들을 모십니다.
+            <span class="highlight" style="margin-top: 20px;">2026. 03. 28</span>
             토요일 오후 12시 30분
         </div>
 
         <div class="location">
-            그랜드 웨딩 컨벤션 1층 아모르홀<br>
-            (서울시 중구 태평로 1가)
-        </div>
-
-        <div class="message">
-            서로가 마주보며 다져온 사랑을<br>
-            이제 함께 같은 곳을 바라보며<br>
-            아름다운 첫 발을 내딛으려 합니다.<br>
-            귀한 걸음 하시어 축복해 주시면 감사하겠습니다.
+            안양 평촌 웨딩 컨벤션 1층 아모르홀<br>
+            경기도 안양시 동안구 동안로 
         </div>
 
         <div class="btn-group">
-            <a href="#" class="btn">지도로 위치 확인하기</a>
+            <a href="https://maps.app.goo.gl/H2zg3RQrarfkqdPr8" target="_blank" class="btn-map">지도로 위치 확인하기</a>
         </div>
 
-        <div style="margin-top: 40px; font-size: 0.8rem; color: #b8b8b8;">
-            신랑 문똘똘 · 신부 이쁜이 드림
+        <div class="footer-message">
+            축복해 주시는 마음 감사히 간직하며<br>
+            예쁘게 잘 살겠습니다.<br><br>
+            <span style="font-weight: 700; color: #555;">문똘똘 · 나프로 드림</span>
         </div>
     </div>
 
